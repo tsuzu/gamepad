@@ -28,3 +28,9 @@ func (g *GamePad) State() (State, error) {
 	}
 	return state, err
 }
+
+func (g *GamePad) Close() error {
+	g.js.Close()
+
+	return nil
+}
